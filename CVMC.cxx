@@ -253,7 +253,6 @@ void CVMC::DoMC() {
 void CVMC::TraceUninfected(CVPerson *aperson, int day) {
   if (!fTraceUninfected) { return; }
   if(aperson->GetHasApp() == 0) { return; }
-  if(fDebug) cout << " person " << aperson->GetId() << " met " << pplMet << " others in " << fDaysBackwardTrace << " days of tracing lookback time " << endl;
   for (int iday = max(0, day - fDaysBackwardTrace); iday <= day; iday++) { // loop over days in the backward trace
     int pplMet = aperson->GetUninfectedContactsDay(iday);
     if (pplMet < 0) { //! We have not yet drawn how many people we meet today, so do it now
