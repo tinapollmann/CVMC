@@ -6,11 +6,19 @@ It requires the root software libraries (https://root.cern) to be installed.
 
 To build, first edit the makefile, putting in the path to ROOT on your system.
 
+After building, the executable runCVMC appears. The programm must be run with a json file 
+that contains all input parameters. An example file is provided as "example_input.json".
+Several command line flags can be used to choose for example the number of runs.
+See "runCVMC.cxx" for the available settings.
+
 By default, the output consists of a single root file that contains two trees:
 1) fPopulationLevelInformation  is ordered by day, and has information on the number of people
 exposed, infected, traced, etc .. for each day. If several simulation runs were done,
-the trees are all concatenated, ie 'day' is not unique in the tree
-2) settings : contains a tree with the values for all the settings
+the trees are all concatenated, ie 'day' is not unique in the tree.
+2) settings : contains a tree with the values for all the settings.
+
+The root script "CVPostProcess.cpp" can be run on the output file to extract summary information.
+This script is meant to be executed in an interactive root session.
 
 If debug output is enabled, detailed information is printed to std out, a tsv file containing
 the same information as the root output file is written, and a .dot output file is
