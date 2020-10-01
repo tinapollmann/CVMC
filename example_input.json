@@ -1,0 +1,40 @@
+{
+    "OutputPrefix": "CovidMCResult",
+    "NPersons": 400,
+    "NDays": 500,
+    "PeopleMetPerDay": 5,
+    "SocialDistancingMaxPeople": 10,
+    "SocialDistancingFrom": 20,
+    "SocialDistancingTo": 50,
+    "SocialDistancingFactor": 0.5,
+    "DaysInQuarantine": 14,
+    "TracingOrder": 1,
+    "DaysBackwardTrace": 14,
+    "StartTracingTestingInfectedFraction": 0.02,
+    "BackwardTracing": false,
+    "TraceUninfected": false,
+    "AppProbability": 0.447,
+    "ReportingProbability": 1.0,
+    "tracingEfficiency": 1.0,
+    "TracingDelay": 0,
+    "DaysToTestResult": 0,
+    "TestThreshold":0.01,
+    "RandomTesting": false,
+    "RandomTestingRate": 0.01,
+    "SymptomProbability": 0.5,
+    "TestPositiveProbability": 0.95,
+    "dTTest": 5,
+    "FalsePositiveRate": 0.01,
+    "TransmissionProbability": 0.064,
+    "AsymptomaticTransmissionScaling": 0.1,
+    "IncubationPeriod": {
+	"mu": 0,
+	"gamma": 3.06,
+	"beta": 2.44
+    },
+    "Infectivity": {
+	"mu": -2.42,
+	"gamma": 2.08,
+	"beta": 1.56
+    }
+}
