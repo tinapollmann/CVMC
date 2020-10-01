@@ -70,7 +70,10 @@ class CVDisease
       fTestThreshold=0.01;            
     }
     //! contruct with internal random number generator
- 
+      CVDisease() : CVDisease(new TRandom3(0)) {
+      //! .. and keep track that intialized with internal generator
+      fInternalRandom = true;
+    }
     //! destruct
     ~CVDisease() {
       //! .. also the internal random number generator
